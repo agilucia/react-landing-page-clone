@@ -2,39 +2,233 @@
 
 import { css } from '@emotion/react';
 import { ReactComponent as SpatiumLogo } from './images/spatiumLogo.svg';
+import { ReactComponent as CloudsImage } from './images/clouds.svg';
 
 const headerFeaturesStyles = css`
+  margin-right: 32px;
   text-decoration: none;
   color: #76226f;
+  font-size: 16px;
+  font-weight: 600;
 `;
 
 const headerDivStyles = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 42px;
+  max-width: 1128px;
+  width: 100%;
+  margin: 0 auto;
 `;
 
 const navHeaderStyles = css`
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-right: 32px;
 `;
 
 const mainSectionHeadingStyles = css`
-  text-align: center;
+  font-size: 64px;
+  font-weight: 600;
+  color: #391f5b;
 `;
 
 const mainSectionParagraphStyles = css`
+  margin: 32px auto 64px;
+  width: 50%;
+  color: #76226f;
+  text-shadow: none;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+`;
+
+const topSectionHeaderStyles = css`
+  background: linear-gradient(0deg, #e7daed, #d8bfe3);
+  border: 1px solid #5c4678;
+  border-top: none;
+  border-bottom: none;
+`;
+
+const spaceOdysseySectionStyles = css`
+  padding-top: 128px;
+  background: linear-gradient(180deg, #e7daed, #d8bfe3);
+  border: 1px solid #5c4678;
+  border-top: none;
   text-align: center;
+`;
+
+const descriptiveSectionStyles = css`
+  background: #391f5b;
+  border: 1px solid #5c4678;
+  padding-top: 300px;
+  position: relative;
+  padding-bottom: 128px;
+`;
+
+const footerMainStyles = css`
+  background: #391f5b;
+  border: 1px solid #5c4678;
+  padding: 64px 32px;
+`;
+
+const cloudsSvgStyles = css`
+  position: absolute;
+  top: -86px;
+  width: 100%;
+  fill: #391f5b;
+`;
+
+const spatiumLogoSvgTopStyles = css`
+  margin-bottom: -16px;
+  margin-left: 16px;
+`;
+
+const newTabBoldStyles = css`
+  border-bottom: 3px dotted #b384c9;
+  font-weight: 700;
+`;
+
+const buttonBorderStyles = css`
+  margin-bottom: 84px;
+  display: inline-flex;
+  border-radius: 42px;
+  padding: 2px;
+  background: linear-gradient(180deg, #d8bfe3 42%, #230b42);
+`;
+
+const buttonLgStyles = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 34px;
+  font-weight: 700;
+  font-size: 21px;
+  background: linear-gradient(
+    180deg,
+    rgba(179, 132, 201, 0.84),
+    rgba(57, 31, 91, 0.84) 50%
+  );
+  box-shadow: 0 2px 2px rgb(57 31 91 / 24%), 0 8px 12px rgb(179 132 201 / 40%);
+  border-radius: 42px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 4px hsl(0deg 0% 100% / 40%), 0 0 12px hsl(0deg 0% 100% / 20%),
+    1px 1px 4px rgb(57 31 91 / 60%), 4px 4px 16px rgb(57 31 91 / 32%);
+`;
+
+const buttonChromeImageStyles = css`
+  margin-right: 8px;
+`;
+
+const containerImagesAndParagraphsStyles = css`
+  max-width: 1128px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+`;
+
+const imagesAndParagraphsSectionsStyles = css`
+  margin: 0 32px;
+  display: flex;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+`;
+
+const imageSplitMedia = css`
+  width: 40%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+`;
+
+const textSplit = css`
+  width: 55%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+`;
+
+const headingsForParagraphsStyles = css`
+  font-size: 32px;
+  font-weight: 700;
+  text-shadow: 0 0 4px hsl(0deg 0% 100% / 30%), 0 0 12px hsl(0deg 0% 100% / 20%),
+    1px 1px 4px rgb(57 31 91 / 60%), 4px 4px 16px rgb(57 31 91 / 32%);
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-bottom: 24px;
+`;
+
+const mainParagraphsStyles = css`
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: #b384c9;
+  text-shadow: #1b0835 0 1px 1px;
+`;
+
+const paragraphLinkToChromeStyles = css`
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: #b384c9;
+  text-shadow: #1b0835 0 1px 1px;
+`;
+
+const linkToChromeStyles = css`
+  font-size: 21px;
+  color: #fff;
+  text-decoration: unset;
+  margin-top: 16px;
+  display: block;
+`;
+
+const dividerLeftStyles = css`
+  margin: 64px 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(179, 132, 201, 0.4),
+    rgba(179, 132, 201, 0)
+  );
+`;
+
+const dividerRightStyles = css`
+  background: linear-gradient(
+    90deg,
+    rgba(179, 132, 201, 0),
+    rgba(179, 132, 201, 0.4)
+  );
+  margin: 64px 0;
+  width: 100%;
+  height: 2px;
 `;
 
 function App() {
   return (
     <>
-      <header>
+      <header css={topSectionHeaderStyles}>
         <div css={headerDivStyles}>
           <a href="/#">
-            <SpatiumLogo />
+            <SpatiumLogo css={spatiumLogoSvgTopStyles} />
           </a>
           <nav css={navHeaderStyles}>
             <a href="/#" css={headerFeaturesStyles}>
@@ -50,86 +244,166 @@ function App() {
         </div>
       </header>
       <main>
-        <section>
+        <section css={spaceOdysseySectionStyles}>
           <h1 css={mainSectionHeadingStyles}>
             A space odyssey <br /> awaits you.
           </h1>
           <p css={mainSectionParagraphStyles}>
-            Beautiful space iamges and information of your current sky map
-            location on every new tab.
+            Beautiful space images and information of your current sky map
+            location on every <strong css={newTabBoldStyles}>new tab </strong>.
           </p>
+          <div css={buttonBorderStyles}>
+            <a
+              href="https://chrome.google.com/webstore/detail/spatium/agdllobgfmpgjedfombjgkkceedjobjb?utm_source=spatium&amp;utm_medium=cta-hero"
+              css={buttonLgStyles}
+            >
+              <img
+                src="https://spatium.earth/chrome-logo.dccedd0b.svg"
+                alt="Chrome Web Store"
+                css={buttonChromeImageStyles}
+              />
+              ADD TO CHROME <span>- IT'S FREE</span>
+            </a>
+          </div>
         </section>
         <section>
-          <img src="/#" alt="tabImage" />
+          <div>
+            <img
+              loading="lazy"
+              className="hero__browser-mockup"
+              src="browser-mockup.9d688e12.svg"
+              alt="Browser Mockup"
+              id="browser-mockup"
+            />
+            <img
+              loading="lazy"
+              src="02.60644d3b.jpg"
+              alt="The giant red nebula (NGC 2014)"
+            />
+          </div>
         </section>
-        <section>
-          <div>
-            <img src="/#" alt="spaceImageAlt" />
-            <div>
-              <h2>Space images.</h2>
-              <p>
-                Every day get a fascinating image of our universe. Enjoy
-                pictures of stars, planets, moons, galaxies, nebulae, comets and
-                more right on your browser tab.
-              </p>
-              <a href="/#">+ Add to Chrome</a>
+        <section css={descriptiveSectionStyles}>
+          <CloudsImage css={cloudsSvgStyles} />
+          <div css={containerImagesAndParagraphsStyles}>
+            <div css={imagesAndParagraphsSectionsStyles}>
+              <img
+                src="https://spatium.earth/feature.cfdac386.png"
+                alt="spaceImageAlt"
+                css={imageSplitMedia}
+              />
+              <div css={textSplit}>
+                <h2 css={headingsForParagraphsStyles}>Space images.</h2>
+                <p css={mainParagraphsStyles}>
+                  Every day get a fascinating image of our universe. Enjoy
+                  pictures of stars, planets, moons, galaxies, nebulae, comets
+                  and more right on your browser tab.
+                </p>
+                <p css={paragraphLinkToChromeStyles}>
+                  <a href="/#" css={linkToChromeStyles}>
+                    + Add to Chrome
+                  </a>
+                </p>
+              </div>
             </div>
-          </div>
-          <div>
-            <div>
-              <h2>Sun Widget.</h2>
-              <p>
-                Find out when the sunrise, sunset, first and last light times
-                will be precisely at your location. It also shows a countdown in
-                an easy-to-read display, so you can stay tuned in your favorite
-                sun event - light up your world!.
-              </p>
-              <a href="/#">+ Add to Chrome</a>
+            <div css={dividerLeftStyles} />
+            <div css={imagesAndParagraphsSectionsStyles}>
+              <div css={textSplit}>
+                <h2 css={headingsForParagraphsStyles}>Sun Widget.</h2>
+                <p css={mainParagraphsStyles}>
+                  Find out when the sunrise, sunset, first and last light times
+                  will be precisely at your location. It also shows a countdown
+                  in an easy-to-read display, so you can stay tuned in your
+                  favorite sun event - light up your world!.
+                </p>
+                <p css={paragraphLinkToChromeStyles}>
+                  <a href="/#" css={linkToChromeStyles}>
+                    + Add to Chrome
+                  </a>
+                </p>
+              </div>
+              <img
+                src="https://spatium.earth/sun-widget.460c42bc.png"
+                alt="sunWidgetImage"
+                css={imageSplitMedia}
+              />
             </div>
-            <img src="/#" alt="sunWidgetImage" />
-          </div>
-          <div>
-            <img src="/#" alt="moonWidgetImage" />
-            <div>
-              <h2>Moon Widget.</h2>
-              <p>
-                See the current moon phase in real-time, countdowns to moon
-                events (New Moon, First Quarter, Full Moon and Last Quarter),
-                along with exact illumination percentages. Never miss an
-                opportunity for moon gazing anymore.
-              </p>
-              <a href="/#">+ Add to Chrome</a>
+            <div css={dividerRightStyles} />
+            <div css={imagesAndParagraphsSectionsStyles}>
+              <img
+                src="https://spatium.earth/moon-widget.460a1bed.png"
+                alt="moonWidgetImage"
+                css={imageSplitMedia}
+              />
+              <div css={textSplit}>
+                <h2 css={headingsForParagraphsStyles}>Moon Widget.</h2>
+                <p css={mainParagraphsStyles}>
+                  See the current moon phase in real-time, countdowns to moon
+                  events (New Moon, First Quarter, Full Moon and Last Quarter),
+                  along with exact illumination percentages. Never miss an
+                  opportunity for moon gazing anymore.
+                </p>
+                <p css={paragraphLinkToChromeStyles}>
+                  <a href="/#" css={linkToChromeStyles}>
+                    + Add to Chrome
+                  </a>
+                </p>
+              </div>
             </div>
-          </div>
-          <div>
-            <div>
-              <h2>Inspire Yourself Daily.</h2>
-              <p>
-                Receive a daily dose of inspiration, insight and positive action
-                with our curated list of quotes from the most intelligent people
-                in history.
-              </p>
-              <a href="/#">+ Add to Chrome</a>
+            <div css={dividerLeftStyles} />
+            <div css={imagesAndParagraphsSectionsStyles}>
+              <div css={textSplit}>
+                <h2 css={headingsForParagraphsStyles}>
+                  Inspire Yourself Daily.
+                </h2>
+                <p css={mainParagraphsStyles}>
+                  Receive a daily dose of inspiration, insight and positive
+                  action with our curated list of quotes from the most
+                  intelligent people in history.
+                </p>
+                <p css={paragraphLinkToChromeStyles}>
+                  <a href="/#" css={linkToChromeStyles}>
+                    + Add to Chrome
+                  </a>
+                </p>
+              </div>
+              <img
+                src="https://spatium.earth/quote-widget.1ab7329e.png"
+                alt="dailyInspirationImage"
+                css={imageSplitMedia}
+              />
             </div>
-            <img src="/#" alt="dailyInspirationImage" />
-          </div>
-          <div>
-            <img src="/#" alt="customizableInterfaceImage" />
-            <div>
-              <h2>Customizable Interface.</h2>
-              <p>
-                You can customize your experience with Spatium by showing and
-                hiding widgets as per your needs. You decide what's on your New
-                Tab page - it's up to you!.
-              </p>
-              <a href="/#">+ Add to Chrome</a>
+            <div css={dividerRightStyles} />
+            <div css={imagesAndParagraphsSectionsStyles}>
+              <img
+                src="https://spatium.earth/customizable-ui.a78085e0.png"
+                alt="customizableInterfaceImage"
+                css={imageSplitMedia}
+              />
+              <div css={textSplit}>
+                <h2 css={headingsForParagraphsStyles}>
+                  Customizable Interface.
+                </h2>
+                <p css={mainParagraphsStyles}>
+                  You can customize your experience with Spatium by showing and
+                  hiding widgets as per your needs. You decide what's on your
+                  New Tab page - it's up to you!.
+                </p>
+                <p css={paragraphLinkToChromeStyles}>
+                  <a href="/#" css={linkToChromeStyles}>
+                    + Add to Chrome
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </section>
       </main>
-      <footer>
+      <footer css={footerMainStyles}>
         <div>
-          <div>Spatium</div>
+          <div>
+            <SpatiumLogo />
+            <p>Made of stardust from Brazil and Canada.</p>
+          </div>
           <div>
             <div>
               <h2>Be the first to know. No spam.</h2>
@@ -140,7 +414,7 @@ function App() {
             </div>
             <div>
               <form>
-                <input></input>
+                <input />
                 <button>Subscribe</button>
               </form>
             </div>
@@ -148,7 +422,10 @@ function App() {
         </div>
         <div>
           <a href="/#">
-            <img src="/#" alt="footerImage" />
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=308719&amp;theme=light"
+              alt="footerImage"
+            />
           </a>
         </div>
       </footer>
