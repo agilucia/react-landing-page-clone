@@ -222,6 +222,126 @@ const dividerRightStyles = css`
   height: 2px;
 `;
 
+const browserMockupImageContainerStyles = css`
+  max-width: 100%;
+  margin-bottom: -16%;
+  margin-left: 16px;
+  margin-right: 16px;
+  display: block;
+`;
+
+const browserMockupTabStyles = css`
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  width: 100%;
+`;
+
+const browserMockupImageStyles = css`
+  height: 100%;
+  width: 100%;
+  border: 4px solid #fff;
+  box-sizing: border-box;
+  border-top: unset;
+  border-bottom-left-radius: 21px;
+  border-bottom-right-radius: 21px;
+`;
+
+const browserMockupImageDivStyles = css`
+  position: relative;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+`;
+
+const spaceOdysseyDivStyles = css`
+  position: relative;
+  z-index: 2;
+  max-width: 1128px;
+  width: 100%;
+  margin: 0 auto;
+`;
+
+const footerContainerStyles = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1128px;
+  width: 100%;
+  margin: 0 auto;
+`;
+
+const footerParagraphStyles = css`
+  font-size: 16px;
+  line-height: 21px;
+  margin-bottom: 32px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #b384c9;
+  text-shadow: #1b0835 0 1px 1px;
+`;
+
+const footerSectionTwoStyles = css`
+  width: 50%;
+  text-align: right;
+`;
+
+const footerSectionTwoHeadgingStyles = css`
+  font-size: 26px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-shadow: 0 0 4px hsl(0deg 0% 100% / 30%), 0 0 12px hsl(0deg 0% 100% / 20%),
+    1px 1px 4px rgb(57 31 91 / 60%), 4px 4px 16px rgb(57 31 91 / 32%);
+  letter-spacing: 0.04em;
+  color: #fff;
+`;
+
+const footerEmailInputStyles = css`
+  border-radius: 42px;
+  padding: 16px 32px;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #391f5b;
+  outline: unset;
+  border: 1px solid #b384c9;
+  font-family: 'Quicksand', sans-serif;
+  box-shadow: 0 0 4px hsl(0deg 0% 100% / 30%), 0 0 12px hsl(0deg 0% 100% / 20%),
+    1px 1px 4px rgb(57 31 91 / 60%), 4px 4px 16px rgb(57 31 91 / 32%);
+`;
+
+const footerButtonStyles = css`
+  box-sizing: border-box;
+  box-shadow: 0 0 8px rgb(231 218 237 / 40%), 0 8px 24px rgb(57 31 91 / 32%);
+  font-family: 'Quicksand', sans-serif;
+  margin-left: 16px;
+  background: linear-gradient(
+    180deg,
+    hsla(0, 0%, 100%, 0.84) -38.04%,
+    rgba(231, 218, 237, 0.84) 31.7%,
+    rgba(231, 218, 237, 0.84) 51.83%,
+    rgba(216, 191, 227, 0.84)
+  );
+  border: 1px solid rgba(231, 218, 237, 0.5);
+  border-radius: 42px;
+  font-size: 16px;
+  padding: 16px 28px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #391f5b;
+`;
+
+const footerLastDivStyles = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1128px;
+  width: 100%;
+  margin: 0 auto;
+`;
+
 function App() {
   return (
     <>
@@ -245,41 +365,42 @@ function App() {
       </header>
       <main>
         <section css={spaceOdysseySectionStyles}>
-          <h1 css={mainSectionHeadingStyles}>
-            A space odyssey <br /> awaits you.
-          </h1>
-          <p css={mainSectionParagraphStyles}>
-            Beautiful space images and information of your current sky map
-            location on every <strong css={newTabBoldStyles}>new tab </strong>.
-          </p>
-          <div css={buttonBorderStyles}>
-            <a
-              href="https://chrome.google.com/webstore/detail/spatium/agdllobgfmpgjedfombjgkkceedjobjb?utm_source=spatium&amp;utm_medium=cta-hero"
-              css={buttonLgStyles}
-            >
+          <div css={spaceOdysseyDivStyles}>
+            <h1 css={mainSectionHeadingStyles}>
+              A space odyssey <br /> awaits you.
+            </h1>
+            <p css={mainSectionParagraphStyles}>
+              Beautiful space images and information of your current sky map
+              location on every <strong css={newTabBoldStyles}>new tab </strong>
+              .
+            </p>
+            <div css={buttonBorderStyles}>
+              <a
+                href="https://chrome.google.com/webstore/detail/spatium/agdllobgfmpgjedfombjgkkceedjobjb?utm_source=spatium&amp;utm_medium=cta-hero"
+                css={buttonLgStyles}
+              >
+                <img
+                  src="https://spatium.earth/chrome-logo.dccedd0b.svg"
+                  alt="Chrome Web Store"
+                  css={buttonChromeImageStyles}
+                />
+                ADD TO CHROME <span>- IT'S FREE</span>
+              </a>
+            </div>
+            <div css={browserMockupImageContainerStyles}>
               <img
-                src="https://spatium.earth/chrome-logo.dccedd0b.svg"
-                alt="Chrome Web Store"
-                css={buttonChromeImageStyles}
+                src="https://spatium.earth/browser-mockup.9d688e12.svg"
+                alt="Browser Mockup"
+                css={browserMockupTabStyles}
               />
-              ADD TO CHROME <span>- IT'S FREE</span>
-            </a>
-          </div>
-        </section>
-        <section>
-          <div>
-            <img
-              loading="lazy"
-              className="hero__browser-mockup"
-              src="browser-mockup.9d688e12.svg"
-              alt="Browser Mockup"
-              id="browser-mockup"
-            />
-            <img
-              loading="lazy"
-              src="02.60644d3b.jpg"
-              alt="The giant red nebula (NGC 2014)"
-            />
+              <div css={browserMockupImageDivStyles}>
+                <img
+                  src="https://spatium.earth/02.60644d3b.jpg"
+                  alt="The giant red nebula (NGC 2014)"
+                  css={browserMockupImageStyles}
+                />
+              </div>
+            </div>
           </div>
         </section>
         <section css={descriptiveSectionStyles}>
@@ -399,28 +520,39 @@ function App() {
         </section>
       </main>
       <footer css={footerMainStyles}>
-        <div>
+        <div css={footerContainerStyles}>
           <div>
-            <SpatiumLogo />
-            <p>Made of stardust from Brazil and Canada.</p>
+            <img
+              src="https://spatium.earth/spatium-white-logo.f2d215ee.svg"
+              alt="SpatiumLogoFooter"
+            />
+            <p css={footerParagraphStyles}>
+              Made of stardust from Brazil and Canada.
+            </p>
           </div>
-          <div>
+          <div css={footerSectionTwoStyles}>
             <div>
-              <h2>Be the first to know. No spam.</h2>
-              <p>
+              <h2 css={footerSectionTwoHeadgingStyles}>
+                Be the first to know. No spam.
+              </h2>
+              <p css={footerParagraphStyles}>
                 Join us and share our passion for the universe!. Stay in the
                 loop about new product updates, features and announcements.
               </p>
             </div>
             <div>
               <form>
-                <input />
-                <button>Subscribe</button>
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  css={footerEmailInputStyles}
+                />
+                <button css={footerButtonStyles}>Subscribe</button>
               </form>
             </div>
           </div>
         </div>
-        <div>
+        <div css={footerLastDivStyles}>
           <a href="/#">
             <img
               src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=308719&amp;theme=light"
